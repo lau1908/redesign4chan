@@ -13,9 +13,9 @@
     <div>
         <h1>@Model.Name</h1>
         @{
-            foreach (var thread in Model.Threads as ICollection<Thread>)
+            foreach (var thread in Model.Threads as ICollection<Thread>)// dette forloop bliver kørt lige så mange gange som der er threads i det board der er blevet trykket på
             {
-                <h3>@thread.content</h3>
+                <h3>@thread.content</h3>//printer contentet af threadsne i boarded
             }
         }
     </div>

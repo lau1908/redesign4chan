@@ -6,9 +6,9 @@
     <h1 id="sitename">4chan</h1>
     
     @{
-        foreach (var board in Model as List<Board>)
+        foreach (var board in Model as List<Board>)// dette forloop bliver kørt ligeså mange gange som der er boards i min database
         {
-            @Html.ActionLink(linkText: board.Name, actionName: "Show", controllerName: "Board", routeValues: new { id = board.Board_ID }, htmlAttributes: null);
+            @Html.ActionLink(linkText: board.Name, actionName: "Show", controllerName: "Board", routeValues: new { id = board.Board_ID }, htmlAttributes: null);//printer et actionlink for hvert board
         }
     }
 </div>

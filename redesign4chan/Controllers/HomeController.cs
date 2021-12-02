@@ -10,7 +10,7 @@ namespace redesign4chan.Controllers
     {
         ny4chanEntities databaseManager = new ny4chanEntities();//jeg erklærer en entiti af min database til objektet "databaseManager"
 
-        public ActionResult Index()
+        public ActionResult Index()//dette kode bliver kørt når brugern åbner indexsiden
         {
             List<Board> board = databaseManager.Boards.ToList(); //her erklære jeg en liste som indeholder mine boards fra databasen og ligger dem i variablen "board"
 
