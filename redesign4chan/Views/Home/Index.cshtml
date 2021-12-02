@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="top">
+    <h1 id="sitename">4chan</h1>
+    
+    @{
+        foreach (var board in Model as List<Board>)
+        {
+            @Html.ActionLink(linkText: board.Name, actionName: "Show", controllerName: "Board", routeValues: new { id = board.Board_ID }, htmlAttributes: null);
+        }
+    }
+</div>
+
+<div class="row">
+    
+</div>
